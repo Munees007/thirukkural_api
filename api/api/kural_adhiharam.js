@@ -1,14 +1,14 @@
-import { mapKural } from "../lib/kuralsHelper";
+import { mapKural } from "../../lib/kuralsHelper";
 
 export default function handler(req, res) {
   if (req.method === "POST") {
-    const { iyal, isEnglish } = req.body;
-    if (!iyal || typeof isEnglish !== "boolean") {
+    const { adhiharam, isEnglish } = req.body;
+    if (!adhiharam || typeof isEnglish !== "boolean") {
       return res.status(400).json({ error: "Invalid input" });
     }
 
     const data = mapKural().filter((v) =>
-      isEnglish ? v.iyal.english.includes(iyal) : v.iyal.tamil.includes(iyal)
+      isEnglish ? v.adhiharam.english.includes(adhiharam) : v.adhiharam.tamil.includes(adhiharam)
     );
 
     res.status(200).json({ count: data.length, data });

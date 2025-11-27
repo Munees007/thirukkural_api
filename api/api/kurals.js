@@ -1,4 +1,4 @@
-import { mapKural } from "../lib/kuralsHelper";
+import { mapKural } from "../../lib/kuralsHelper";
 
 export default function handler(req, res) {
   if (req.method === "POST") {
