@@ -37,3 +37,4 @@ coverage/
 
 # Debug folders
 *.tgz
+.vercel
