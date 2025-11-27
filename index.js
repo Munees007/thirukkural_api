@@ -130,5 +130,5 @@ app.post("/api/kural_iyal",(req,res)=>{
 })
 
 app.listen(PORT,()=>{
-    console.log(`✅ Thirukkural API running at http://localhost:${PORT}`);
+    console.log(`Thirukkural API running at port:${PORT}`);
 })
