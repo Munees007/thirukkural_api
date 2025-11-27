@@ -129,4 +129,9 @@ app.post("/api/kural_iyal",(req,res)=>{
     res.json({count:data.length,data});
 })
 
-module.exports = app;
+app.get("/",(req,res)=>{
+  res.send("Welcome to thirukkural api")
+})
+app.listen(PORT,()=>{
+    console.log(`Thirukkural API running at port:${PORT}`);
+})
